@@ -7,11 +7,13 @@ from flask import Flask
 from flask_restful import Api
 from myapp.resources.algorithmsCollection import Algorithms
 from myapp.common.config import ReadConfigFile
+from myapp.resources.processData import DealData
 app = Flask(__name__)
 api = Api(app)
 
 
 api.add_resource(Algorithms, '/algorithms')
+api.add_resource(DealData, '/dealData')
 
 
 if __name__ == '__main__':
